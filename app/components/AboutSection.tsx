@@ -5,21 +5,25 @@ import { Code, Database, Globe, Smartphone, Award } from "lucide-react";
 
 const AboutSection = () => {
   const skills = [
-    { name: "React.js", icon: <Code className="w-6 h-6" />, level: 90 },
-    { name: "Next.js", icon: <Globe className="w-6 h-6" />, level: 85 },
+    { name: "React.js", icon: <Code className="w-6 h-6" />, level: 95 },
+    { name: "Next.js", icon: <Globe className="w-6 h-6" />, level: 90 },
     { name: "JavaScript", icon: <Code className="w-6 h-6" />, level: 95 },
-    { name: "TypeScript", icon: <Code className="w-6 h-6" />, level: 80 },
+    { name: "TypeScript", icon: <Code className="w-6 h-6" />, level: 85 },
+    { name: "Java", icon: <Code className="w-6 h-6" />, level: 90 },
+    { name: "Zoho CRM", icon: <Database className="w-6 h-6" />, level: 90 },
+    { name: "React Native", icon: <Smartphone className="w-6 h-6" />, level: 85 },
+    { name: "Node.js", icon: <Database className="w-6 h-6" />, level: 80 },
+    { name: "Express.js", icon: <Database className="w-6 h-6" />, level: 80 },
+    { name: "MongoDB", icon: <Database className="w-6 h-6" />, level: 75 },
     { name: "Tailwind CSS", icon: <Code className="w-6 h-6" />, level: 90 },
-    { name: "Zoho CRM", icon: <Database className="w-6 h-6" />, level: 85 },
-    { name: "API Integration", icon: <Database className="w-6 h-6" />, level: 88 },
-    { name: "Responsive Design", icon: <Smartphone className="w-6 h-6" />, level: 92 },
+    { name: "Figma", icon: <Globe className="w-6 h-6" />, level: 85 },
   ];
 
   const stats = [
-    { number: "3+", label: "Years Experience" },
-    { number: "15+", label: "Projects Completed" },
-    { number: "5+", label: "Happy Clients" },
-    { number: "100%", label: "Client Satisfaction" },
+    { number: "2+", label: "Years Experience" },
+    { number: "10+", label: "Projects Completed" },
+    { number: "100+", label: "Algorithms Solved" },
+    { number: "98%", label: "Issue Resolution" },
   ];
 
   return (
@@ -36,8 +40,8 @@ const AboutSection = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I'm a passionate frontend developer with a love for creating exceptional user experiences 
-            and solving complex problems through clean, efficient code.
+            Passionate Frontend Developer specializing in React.js, Next.js, and modern web technologies. 
+            Experienced in building scalable applications, CRM integrations, and mobile solutions.
           </p>
         </motion.div>
 
@@ -65,18 +69,18 @@ const AboutSection = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              Frontend Developer & Problem Solver
+              Frontend Developer & React Enthusiast
             </h3>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-              With over 3 years of experience in frontend development, I specialize in creating 
-              modern, responsive web applications using React.js, Next.js, and other cutting-edge 
-              technologies. I'm passionate about writing clean code, optimizing performance, and 
-              delivering exceptional user experiences.
+              Currently working as a Developer at CRM Masters Infotech LLP, I specialize in building 
+              scalable React.js and React Native applications. With expertise in Zoho CRM integration, 
+              I help businesses streamline their operations and improve efficiency through custom solutions.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-              I have extensive experience with Zoho CRM integration and API development, helping 
-              businesses streamline their processes and improve efficiency. I love tackling complex 
-              challenges and turning ideas into reality.
+              I have a strong foundation in Java programming with 100+ algorithmic problems solved, 
+              and extensive experience in full-stack development using modern technologies like Next.js, 
+              Node.js, and MongoDB. I'm passionate about creating responsive, user-friendly applications 
+              that deliver exceptional performance.
             </p>
 
             {/* Stats */}
@@ -113,7 +117,7 @@ const AboutSection = () => {
           <h3 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
             Technical Skills
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {skills.map((skill, index) => (
               <motion.div
                 key={skill.name}

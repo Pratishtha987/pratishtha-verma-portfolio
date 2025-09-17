@@ -194,7 +194,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Frontend Developer | React.js Enthusiast | Problem Solver
+          Frontend Developer | React.js & React Native Specialist | Full-Stack Developer | Zoho CRM Expert
         </motion.p>
         
         <motion.p 
@@ -203,8 +203,8 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          I create beautiful, responsive web applications that solve real-world problems. 
-          Passionate about clean code, user experience, and continuous learning.
+          I specialize in building scalable React.js applications, React Native mobile apps, and Zoho CRM integrations. 
+          Expert in JavaScript, TypeScript, Node.js, and modern web technologies with 2+ years of professional experience.
         </motion.p>
 
         <motion.div 

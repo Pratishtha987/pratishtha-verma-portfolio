@@ -22,19 +22,23 @@ const Footer = () => {
           </p>
           <div className="flex justify-center space-x-6 mb-6">
             <a
-              href="https://github.com/pratishtha-verma"
+              href="https://github.com/pratishthaverma"
               className="text-gray-400 hover:text-white transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com/in/pratishtha-verma"
+              href="https://linkedin.com/in/pratishthaverma"
               className="text-gray-400 hover:text-white transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="mailto:pratishtha.verma@email.com"
+              href="mailto:pratishthaverma2000@gmail.com"
               className="text-gray-400 hover:text-white transition-colors duration-300"
             >
               <Mail className="w-6 h-6" />

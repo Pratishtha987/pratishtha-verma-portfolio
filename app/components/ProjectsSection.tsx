@@ -10,77 +10,114 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React.js and Node.js, featuring real-time inventory management and payment integration.",
+      title: "Amazon Clone",
+      description: "A fully responsive e-commerce platform clone built with React and Next.js, featuring product listings, shopping cart, and user authentication. Optimized for desktop and mobile with modern UI/UX design.",
       image: "/api/placeholder/600/400",
-      tags: ["React.js", "Node.js", "MongoDB", "Stripe API"],
+      tags: ["HTML", "CSS", "React", "Next.js", "E-commerce", "Responsive Design"],
       category: "web",
       liveUrl: "#",
-      githubUrl: "#",
-      featured: true
+      githubUrl: "https://github.com/Pratishtha987/Amazon_clone",
+      featured: true,
+      achievements: [
+        "Built complete e-commerce functionality with product catalog and shopping cart",
+        "Implemented responsive design for optimal mobile and desktop experience",
+        "Created modern UI/UX with clean, professional interface",
+        "Demonstrated full-stack development skills with React and Next.js"
+      ]
     },
     {
       id: 2,
-      title: "Zoho CRM Integration",
-      description: "Custom Zoho CRM integration solution that automates lead management and improves sales workflow efficiency by 40%.",
+      title: "Seat Booking System",
+      description: "Developed a React Native application for coworking space seat booking with QR code generation and real-time booking management.",
       image: "/api/placeholder/600/400",
-      tags: ["Zoho CRM", "API Integration", "JavaScript", "Automation"],
-      category: "integration",
+      tags: ["React Native", "QR Code", "Mobile Development", "Booking System"],
+      category: "mobile",
       liveUrl: "#",
       githubUrl: "#",
-      featured: true
+      featured: true,
+      achievements: [
+        "Enabled users to request bookings and clients to approve them seamlessly",
+        "Implemented QR code generation for confirmed bookings with customer details",
+        "Integrated seat assignment and booking confirmation system",
+        "Built for both iOS and Android platforms"
+      ]
     },
     {
       id: 3,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team collaboration features, and progress tracking.",
+      title: "Zoho CRM Custom Framework",
+      description: "Constructed a custom CRM framework using Zoho and no-code technologies, utilized by 15+ team members for enhanced collaboration.",
       image: "/api/placeholder/600/400",
-      tags: ["React.js", "Firebase", "Real-time", "Collaboration"],
-      category: "web",
+      tags: ["Zoho CRM", "No-Code", "Custom Framework", "Team Collaboration"],
+      category: "integration",
       liveUrl: "#",
       githubUrl: "#",
-      featured: false
+      featured: true,
+      achievements: [
+        "Streamlined CRM workflows by integrating AI solutions",
+        "Reduced processing time by 40% through automation",
+        "Improved overall operational efficiency with AI technologies",
+        "Created over five interactive and responsive prototypes"
+      ]
     },
     {
       id: 4,
-      title: "Analytics Dashboard",
-      description: "Interactive analytics dashboard for business intelligence with data visualization and custom reporting features.",
+      title: "Spotify Clone",
+      description: "A music streaming application clone built with HTML, CSS, and JavaScript, featuring music player functionality, playlist management, and responsive design.",
       image: "/api/placeholder/600/400",
-      tags: ["Next.js", "Chart.js", "Data Visualization", "TypeScript"],
+      tags: ["HTML", "CSS", "JavaScript", "Music Player", "Responsive Design"],
       category: "web",
       liveUrl: "#",
-      githubUrl: "#",
-      featured: false
+      githubUrl: "https://github.com/Pratishtha987/Spotify_Clone",
+      featured: false,
+      achievements: [
+        "Created interactive music player with play/pause, skip, and volume controls",
+        "Implemented responsive design for seamless mobile and desktop experience",
+        "Built playlist management functionality with local storage",
+        "Demonstrated advanced CSS animations and JavaScript DOM manipulation"
+      ]
     },
     {
       id: 5,
-      title: "API Gateway Service",
-      description: "Microservices API gateway with authentication, rate limiting, and request routing for scalable applications.",
+      title: "Password Generator",
+      description: "A secure password generator application built with JavaScript, featuring customizable length, character types, and strength validation for enhanced security.",
       image: "/api/placeholder/600/400",
-      tags: ["Node.js", "Express", "JWT", "Microservices"],
-      category: "backend",
+      tags: ["JavaScript", "Security", "Password Generation", "Web App"],
+      category: "web",
       liveUrl: "#",
-      githubUrl: "#",
-      featured: false
+      githubUrl: "https://github.com/Pratishtha987/Password-Generator",
+      featured: false,
+      achievements: [
+        "Built secure password generation with customizable parameters",
+        "Implemented strength validation and security best practices",
+        "Created user-friendly interface with real-time feedback",
+        "Demonstrated JavaScript expertise and security awareness"
+      ]
     },
     {
       id: 6,
-      title: "Mobile-First Landing Page",
-      description: "Responsive landing page optimized for mobile devices with smooth animations and high conversion rates.",
+      title: "Parallax Project",
+      description: "An interactive parallax scrolling website built with HTML, CSS, and JavaScript, featuring smooth animations and engaging visual effects for enhanced user experience.",
       image: "/api/placeholder/600/400",
-      tags: ["React.js", "Tailwind CSS", "Mobile-First", "SEO"],
+      tags: ["HTML5", "CSS3", "JavaScript", "Parallax", "Animations"],
       category: "web",
       liveUrl: "#",
-      githubUrl: "#",
-      featured: false
+      githubUrl: "https://github.com/Pratishtha987/Parallax-Project",
+      featured: false,
+      achievements: [
+        "Implemented smooth parallax scrolling effects with CSS and JavaScript",
+        "Created engaging visual animations and interactive elements",
+        "Built responsive design that works across all device sizes",
+        "Demonstrated advanced CSS techniques and JavaScript animations"
+      ]
     }
   ];
 
   const categories = [
     { id: 'all', name: 'All Projects' },
     { id: 'web', name: 'Web Applications' },
-    { id: 'integration', name: 'Integrations' },
-    { id: 'backend', name: 'Backend Services' }
+    { id: 'mobile', name: 'Mobile Apps' },
+    { id: 'integration', name: 'CRM Integration' },
+    { id: 'algorithms', name: 'Algorithms' }
   ];
 
   const filteredProjects = filter === 'all' 
@@ -101,8 +138,8 @@ const ProjectsSection = () => {
             My Projects
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Here are some of my recent projects that showcase my skills and experience in 
-            modern web development and business solutions.
+            Here are some of my recent projects that showcase my expertise in React.js, React Native, 
+            Zoho CRM integration, and full-stack development with measurable business impact.
           </p>
         </motion.div>
 

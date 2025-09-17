@@ -97,7 +97,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900 dark:text-white">Email</p>
-                  <p className="text-gray-600 dark:text-gray-300">pratishtha.verma@email.com</p>
+                  <p className="text-gray-600 dark:text-gray-300">pratishthaverma2000@gmail.com</p>
                 </div>
               </div>
               
@@ -107,7 +107,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900 dark:text-white">LinkedIn</p>
-                  <p className="text-gray-600 dark:text-gray-300">linkedin.com/in/pratishtha-verma</p>
+                  <p className="text-gray-600 dark:text-gray-300">linkedin.com/in/pratishthaverma</p>
                 </div>
               </div>
               
@@ -117,14 +117,24 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900 dark:text-white">GitHub</p>
-                  <p className="text-gray-600 dark:text-gray-300">github.com/pratishtha-verma</p>
+                  <p className="text-gray-600 dark:text-gray-300">github.com/pratishthaverma</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
+                  <Users className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-900 dark:text-white">Phone</p>
+                  <p className="text-gray-600 dark:text-gray-300">+91 6307613746</p>
                 </div>
               </div>
             </div>
 
             <div className="flex gap-4">
               <a
-                href="mailto:pratishtha.verma@email.com"
+                href="mailto:pratishthaverma2000@gmail.com"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2"
               >
                 <Mail className="w-5 h-5" />

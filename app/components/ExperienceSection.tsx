@@ -6,42 +6,59 @@ import { MapPin } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Senior Frontend Developer",
-      company: "Tech Solutions Inc.",
+      title: "Developer",
+      company: "CRM Masters Infotech LLP",
       location: "Remote",
-      duration: "2022 - Present",
-      description: "Leading frontend development for enterprise applications, mentoring junior developers, and implementing modern React.js solutions.",
+      duration: "Jan 2025 - Present",
+      description: "Developing seat booking systems for coworking spaces using React Native and implementing QR code generation for confirmed bookings.",
       achievements: [
-        "Led development of 5+ major web applications",
-        "Improved application performance by 40%",
-        "Mentored 3 junior developers",
-        "Implemented CI/CD pipeline for frontend deployments"
+        "Developed a seat booking system for coworking spaces using React Native, enabling users to request bookings and clients to approve them",
+        "Implemented QR code generation for confirmed bookings, including customer details and assigned seat information",
+        "Configured and customized Zoho CRM and Desk for clients, integrating lead management from their websites",
+        "Technologies: React Native, Zoho CRM, QR Code Integration, Mobile Development"
+      ]
+    },
+    {
+      title: "Freelance Web Developer & IT Specialist",
+      company: "Quick-Funded (www.quick-funded.io)",
+      location: "Remote",
+      duration: "Jun 2024 - Dec 2024",
+      description: "Built scalable and modular websites with React, managed server operations, and delivered comprehensive IT solutions.",
+      achievements: [
+        "Built a scalable and modular website with React, boosting code maintainability by 30% and cutting deployment time by 25%",
+        "Resolved a 40% productivity drop by streamlining team collaboration tools",
+        "Managed server operations, hosting platforms, and DNS configurations, increasing uptime by 15% and boosting website speed by 30%",
+        "Implemented robust IT solutions, resulting in a 25% reduction in technical downtime",
+        "Delivered comprehensive IT support with a 98% resolution rate for technical issues"
       ]
     },
     {
       title: "Frontend Developer",
-      company: "Digital Innovations",
-      location: "New York, NY",
-      duration: "2021 - 2022",
-      description: "Developed responsive web applications and integrated third-party APIs including Zoho CRM solutions.",
+      company: "ABATA AI",
+      location: "Remote",
+      duration: "Jun 2024 - Dec 2024",
+      description: "Constructed custom CRM frameworks using Zoho and no-code technologies, with hands-on experience in UI/UX design.",
       achievements: [
-        "Built 10+ responsive web applications",
-        "Integrated Zoho CRM with custom dashboards",
-        "Reduced page load times by 35%",
-        "Collaborated with UX/UI designers on 15+ projects"
+        "Constructed a custom CRM framework using Zoho and no-code technologies, utilized by 15+ team members",
+        "Gained hands-on experience in UI/UX design with Figma and Framer, creating over five interactive and responsive prototypes",
+        "Streamlined CRM workflows by integrating AI solutions, reducing processing time by 40%",
+        "Improved overall operational efficiency by leveraging AI technologies",
+        "Technologies: Figma, Framer, Zoho CRM, React.js"
       ]
     },
     {
-      title: "Junior Developer Intern",
-      company: "StartupXYZ",
-      location: "San Francisco, CA",
-      duration: "2020 - 2021",
-      description: "Gained hands-on experience with React.js, JavaScript, and modern web development practices.",
+      title: "Frontend Developer",
+      company: "Newton School",
+      location: "Remote",
+      duration: "Dec 2022 - May 2024",
+      description: "Mastered algorithmic problem-solving in Java and gained extensive experience in frontend development using modern web standards.",
       achievements: [
-        "Contributed to 3 major projects",
-        "Learned modern JavaScript frameworks",
-        "Participated in agile development process",
-        "Built first full-stack application"
+        "Mastered over 100 algorithmic problems in Java, significantly enhancing coding efficiency and optimization techniques",
+        "Successfully completed five cross-functional group projects, resulting in a 30% increase in project delivery speed",
+        "Acquired hands-on experience in frontend development using HTML5, CSS, Bootstrap, and JavaScript",
+        "Delivered responsive and user-friendly designs for over 3 projects with mobile-first layouts",
+        "Achieved top-tier performance in data structure and algorithm challenges",
+        "Technologies: HTML, CSS, Bootstrap, Tailwind, JavaScript, React.js"
       ]
     }
   ];
@@ -60,8 +77,8 @@ const ExperienceSection = () => {
             Experience
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            My professional journey in web development, from intern to senior developer, 
-            with a focus on creating impactful solutions.
+            My professional journey in web development, specializing in React.js, React Native, 
+            and Zoho CRM integration with a focus on creating scalable solutions.
           </p>
         </motion.div>
 
