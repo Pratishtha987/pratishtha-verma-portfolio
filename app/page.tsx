@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import dynamic from "next/dynamic";
 import { 
   Sun, 
   Moon, 
@@ -260,7 +261,21 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
 // Main App Component
-export default function Home() {
+const Home = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-white dark:bg-gray-900 flex items-center justify-center">
+        <div className="text-2xl font-bold text-gray-600 dark:text-gray-300">Loading...</div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Navigation />
@@ -272,4 +287,6 @@ export default function Home() {
       <Footer />
     </div>
   );
-}
+};
+
+export default Home;
