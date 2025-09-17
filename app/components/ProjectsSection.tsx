@@ -61,6 +61,40 @@ const ProjectsSection = () => {
     },
     {
       id: 4,
+      title: "Quick-Funded Website",
+      description: "A professional business website built with React and Vite, featuring modern design, responsive layout, and deployed on Vercel. Built for a real client with custom domain.",
+      image: "/api/placeholder/600/400",
+      tags: ["React", "Vite", "Vercel", "Business Website", "Client Project"],
+      category: "web",
+      liveUrl: "https://www.quick-funded.io",
+      githubUrl: "https://github.com/Pratishtha987/quick-funded",
+      featured: true,
+      achievements: [
+        "Built scalable and modular website with React and Vite, boosting code maintainability by 30%",
+        "Deployed on Vercel with custom domain (www.quick-funded.io) for professional presentation",
+        "Implemented responsive design optimized for all devices and screen sizes",
+        "Delivered real client project with modern UI/UX and fast loading performance"
+      ]
+    },
+    {
+      id: 5,
+      title: "Password Generator",
+      description: "A secure password generator application built with JavaScript, featuring customizable length, character types, and strength validation for enhanced security. Deployed on Netlify with live demo.",
+      image: "/api/placeholder/600/400",
+      tags: ["JavaScript", "Security", "Password Generation", "Web App", "Netlify"],
+      category: "web",
+      liveUrl: "https://stirring-basbousa-ebd907.netlify.app/",
+      githubUrl: "https://github.com/Pratishtha987/Password-Generator",
+      featured: true,
+      achievements: [
+        "Built secure password generation with customizable parameters and real-time strength validation",
+        "Implemented modern UI with interactive controls for uppercase, lowercase, numbers, and symbols",
+        "Deployed live application on Netlify with custom domain",
+        "Demonstrated JavaScript expertise and security best practices"
+      ]
+    },
+    {
+      id: 6,
       title: "Spotify Clone",
       description: "A music streaming application clone built with HTML, CSS, and JavaScript, featuring music player functionality, playlist management, and responsive design.",
       image: "/api/placeholder/600/400",
@@ -77,24 +111,7 @@ const ProjectsSection = () => {
       ]
     },
     {
-      id: 5,
-      title: "Password Generator",
-      description: "A secure password generator application built with JavaScript, featuring customizable length, character types, and strength validation for enhanced security.",
-      image: "/api/placeholder/600/400",
-      tags: ["JavaScript", "Security", "Password Generation", "Web App"],
-      category: "web",
-      liveUrl: "#",
-      githubUrl: "https://github.com/Pratishtha987/Password-Generator",
-      featured: false,
-      achievements: [
-        "Built secure password generation with customizable parameters",
-        "Implemented strength validation and security best practices",
-        "Created user-friendly interface with real-time feedback",
-        "Demonstrated JavaScript expertise and security awareness"
-      ]
-    },
-    {
-      id: 6,
+      id: 7,
       title: "Parallax Project",
       description: "An interactive parallax scrolling website built with HTML, CSS, and JavaScript, featuring smooth animations and engaging visual effects for enhanced user experience.",
       image: "/api/placeholder/600/400",
