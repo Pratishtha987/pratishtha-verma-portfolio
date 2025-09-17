@@ -8,8 +8,8 @@ console.log('Environment check:', {
   apiKeyLength: process.env.RESEND_API_KEY?.length || 0
 });
 
-// Fallback API key for development
-const apiKey = process.env.RESEND_API_KEY || 're_2ND1Zu7N_ESviSKZrwruab63Dqea6xCb5';
+// Get API key from environment variables only
+const apiKey = process.env.RESEND_API_KEY;
 const resend = new Resend(apiKey);
 
 export async function GET() {
