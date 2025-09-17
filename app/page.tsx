@@ -26,27 +26,31 @@ import {
 // Theme Context
 const useTheme = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [mounted, setMounted] = useState(false);
   
   useEffect(() => {
+    setMounted(true);
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('theme', theme);
-    document.documentElement.classList.toggle('dark', theme === 'dark');
-  }, [theme]);
+    if (mounted) {
+      localStorage.setItem('theme', theme);
+      document.documentElement.classList.toggle('dark', theme === 'dark');
+    }
+  }, [theme, mounted]);
 
   const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');
   
-  return { theme, toggleTheme };
+  return { theme, toggleTheme, mounted };
 };
 
 // Navigation Component
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme, mounted } = useTheme();
   const { scrollY } = useScroll();
   const backgroundColor = useTransform(scrollY, [0, 100], ['rgba(255,255,255,0)', 'rgba(255,255,255,0.95)']);
   const darkBackgroundColor = useTransform(scrollY, [0, 100], ['rgba(0,0,0,0)', 'rgba(0,0,0,0.95)']);
@@ -101,8 +105,9 @@ const Navigation = () => {
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              suppressHydrationWarning
             >
-              {theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+              {mounted ? (theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />) : <Moon className="w-5 h-5" />}
             </motion.button>
 
             {/* Mobile menu button */}
@@ -263,7 +268,7 @@ import Footer from './components/Footer';
 // Main App Component
 const Home = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300" suppressHydrationWarning>
       <Navigation />
       <HeroSection />
       <AboutSection />
