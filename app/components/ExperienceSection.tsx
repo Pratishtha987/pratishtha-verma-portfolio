@@ -8,7 +8,7 @@ const ExperienceSection = () => {
     {
       title: "Developer",
       company: "CRM Masters Infotech LLP",
-      location: "Remote",
+      location: "On-site",
       duration: "Jan 2025 - Present",
       description: "Developing seat booking systems for coworking spaces using React Native and implementing QR code generation for confirmed bookings.",
       achievements: [
