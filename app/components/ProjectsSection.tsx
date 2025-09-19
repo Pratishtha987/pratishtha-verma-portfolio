@@ -113,18 +113,35 @@ const ProjectsSection = () => {
     {
       id: 7,
       title: "Parallax Project",
-      description: "An interactive parallax scrolling website built with HTML, CSS, and JavaScript, featuring smooth animations and engaging visual effects for enhanced user experience.",
+      description: "An interactive parallax scrolling website built with HTML, CSS, and JavaScript, featuring smooth animations and engaging visual effects for enhanced user experience. Deployed on Netlify with live demo.",
       image: "/api/placeholder/600/400",
-      tags: ["HTML5", "CSS3", "JavaScript", "Parallax", "Animations"],
+      tags: ["HTML5", "CSS3", "JavaScript", "Parallax", "Animations", "Netlify"],
       category: "web",
-      liveUrl: "#",
+      liveUrl: "https://parallex-pro.netlify.app/",
       githubUrl: "https://github.com/Pratishtha987/Parallax-Project",
-      featured: false,
+      featured: true,
       achievements: [
         "Implemented smooth parallax scrolling effects with CSS and JavaScript",
-        "Created engaging visual animations and interactive elements",
-        "Built responsive design that works across all device sizes",
+        "Created engaging visual animations and interactive elements for adventure theme",
+        "Deployed live application on Netlify with custom domain",
         "Demonstrated advanced CSS techniques and JavaScript animations"
+      ]
+    },
+    {
+      id: 8,
+      title: "Quiz Master - Interactive Quiz App",
+      description: "A modern, feature-rich quiz application built with React featuring multiple categories, difficulty levels, timer functionality, and comprehensive scoring system. Deployed on Vercel with live demo.",
+      image: "/api/placeholder/600/400",
+      tags: ["React", "JavaScript", "CSS3", "Quiz App", "Interactive", "Vercel"],
+      category: "web",
+      liveUrl: "https://quiz-app-gamma-sooty.vercel.app/",
+      githubUrl: "https://github.com/Pratishtha987/Quiz-App",
+      featured: true,
+      achievements: [
+        "Built interactive quiz with 6 categories and 3 difficulty levels",
+        "Implemented real-time progress tracking and timer functionality",
+        "Created responsive design with dark/light theme toggle",
+        "Deployed live application on Vercel with modern UI/UX"
       ]
     }
   ];
@@ -174,9 +191,17 @@ const ProjectsSection = () => {
               onClick={() => setFilter(category.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 filter === category.id
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                  : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                  ? 'text-white shadow-lg'
+                  : 'border'
               }`}
+              style={filter === category.id 
+                ? { backgroundColor: '#38b2ac' }
+                : { 
+                    borderColor: '#38b2ac',
+                    color: '#38b2ac',
+                    backgroundColor: '#ffffff'
+                  }
+              }
             >
               {category.name}
             </button>
@@ -196,7 +221,8 @@ const ProjectsSection = () => {
               whileHover={{ y: -5 }}
             >
               <div className="relative">
-                <div className="w-full h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-2xl font-bold">
+                <div className="w-full h-48 flex items-center justify-center text-white text-2xl font-bold"
+                     style={{ backgroundColor: '#38b2ac' }}>
                   {project.title.charAt(0)}
                 </div>
                 {project.featured && (
@@ -218,7 +244,11 @@ const ProjectsSection = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full"
+                      className="px-3 py-1 text-sm rounded-full"
+                      style={{ 
+                        backgroundColor: '#e6fffa',
+                        color: '#38b2ac'
+                      }}
                     >
                       {tag}
                     </span>
@@ -228,14 +258,20 @@ const ProjectsSection = () => {
                 <div className="flex gap-4">
                   <a
                     href={project.liveUrl}
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg text-center font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+                    className="flex-1 text-white py-2 px-4 rounded-lg text-center font-semibold hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
+                    style={{ backgroundColor: '#38b2ac' }}
                   >
                     <ExternalLink className="w-4 h-4" />
                     Live Demo
                   </a>
                   <a
                     href={project.githubUrl}
-                    className="flex-1 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 py-2 px-4 rounded-lg text-center font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 flex items-center justify-center gap-2"
+                    className="flex-1 border-2 py-2 px-4 rounded-lg text-center font-semibold transition-all duration-300 flex items-center justify-center gap-2"
+                    style={{ 
+                      borderColor: '#38b2ac',
+                      color: '#38b2ac',
+                      backgroundColor: '#ffffff'
+                    }}
                   >
                     <Github className="w-4 h-4" />
                     Code

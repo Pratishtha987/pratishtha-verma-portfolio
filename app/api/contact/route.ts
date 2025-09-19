@@ -10,7 +10,7 @@ console.log('Environment check:', {
 
 // Get API key from environment variables only
 const apiKey = process.env.RESEND_API_KEY;
-const resend = new Resend(apiKey);
+const resend = apiKey ? new Resend(apiKey) : null;
 
 export async function GET() {
   return NextResponse.json({ message: 'Contact API is working' });
@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if API key is available
-    if (!apiKey) {
+    if (!apiKey || !resend) {
       console.error('API key is not available');
       // For now, just log the contact form data and return success
       console.log('Contact form submission (no email sent):', { name, email, message });

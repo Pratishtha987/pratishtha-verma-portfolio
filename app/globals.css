@@ -12,8 +12,15 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Dark mode using class selector */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+/* Fallback for system preference */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light) {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
@@ -23,11 +30,309 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure dark mode classes work with Tailwind v4 */
+@layer base {
+  .dark {
+    color-scheme: dark;
+  }
+  
+  .light {
+    color-scheme: light;
+  }
+}
+
+/* Ensure proper dark mode styling */
+.dark {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+}
+
+/* Light theme styles - Cool Gray + Teal */
+.light,
+[data-theme="light"] {
+  color-scheme: light !important;
+}
+
+/* Force light theme on all elements */
+.light *,
+[data-theme="light"] * {
+  transition: all 0.3s ease !important;
+}
+
+.light section,
+[data-theme="light"] section {
+  background-color: #ffffff !important;
+}
+
+.light .bg-gray-50,
+[data-theme="light"] .bg-gray-50 {
+  background-color: #ffffff !important;
+}
+
+.light .bg-white,
+[data-theme="light"] .bg-white {
+  background-color: #ffffff !important;
+}
+
+.light .bg-gray-900,
+[data-theme="light"] .bg-gray-900 {
+  background-color: #ffffff !important;
+}
+
+.light .text-gray-900,
+[data-theme="light"] .text-gray-900 {
+  color: #2d3748 !important;
+}
+
+.light .text-gray-600,
+[data-theme="light"] .text-gray-600 {
+  color: #2d3748 !important;
+}
+
+.light .text-gray-700,
+[data-theme="light"] .text-gray-700 {
+  color: #2d3748 !important;
+}
+
+.light .text-gray-300,
+[data-theme="light"] .text-gray-300 {
+  color: #2d3748 !important;
+}
+
+.light .text-white,
+[data-theme="light"] .text-white {
+  color: #2d3748 !important;
+}
+
+.light body,
+[data-theme="light"] body {
+  background-color: #ffffff !important;
+  color: #2d3748 !important;
+}
+
+.light .min-h-screen,
+[data-theme="light"] .min-h-screen {
+  background-color: #ffffff !important;
+}
+
+/* Enhanced button styles for light theme - Teal accent */
+.light button.bg-gradient-to-r,
+[data-theme="light"] button.bg-gradient-to-r,
+.light a.bg-gradient-to-r,
+[data-theme="light"] a.bg-gradient-to-r {
+  background: #38b2ac !important;
+}
+
+.light .border-gray-300,
+[data-theme="light"] .border-gray-300 {
+  border-color: #e2e8f0 !important;
+}
+
+.light .border-gray-600,
+[data-theme="light"] .border-gray-600 {
+  border-color: #cbd5e0 !important;
+}
+
+.light .hover\:bg-gray-50:hover,
+[data-theme="light"] .hover\:bg-gray-50:hover {
+  background-color: #f7fafc !important;
+}
+
+.light .hover\:bg-gray-700:hover,
+[data-theme="light"] .hover\:bg-gray-700:hover {
+  background-color: #f7fafc !important;
+}
+
+/* Enhanced card and container styles */
+.light .bg-gray-100,
+[data-theme="light"] .bg-gray-100 {
+  background-color: #f7fafc !important;
+}
+
+.light .bg-gray-200,
+[data-theme="light"] .bg-gray-200 {
+  background-color: #e2e8f0 !important;
+}
+
+.light .bg-blue-100,
+[data-theme="light"] .bg-blue-100 {
+  background-color: #e6fffa !important;
+}
+
+.light .bg-green-100,
+[data-theme="light"] .bg-green-100 {
+  background-color: #e6fffa !important;
+}
+
+.light .bg-purple-100,
+[data-theme="light"] .bg-purple-100 {
+  background-color: #e6fffa !important;
+}
+
+/* Enhanced text colors - Teal accent */
+.light .text-blue-600,
+[data-theme="light"] .text-blue-600 {
+  color: #38b2ac !important;
+}
+
+.light .text-green-600,
+[data-theme="light"] .text-green-600 {
+  color: #38b2ac !important;
+}
+
+.light .text-purple-600,
+[data-theme="light"] .text-purple-600 {
+  color: #38b2ac !important;
+}
+
+/* Enhanced navigation and button styles */
+.light .bg-white\/80,
+[data-theme="light"] .bg-white\/80 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.light .backdrop-blur-md,
+[data-theme="light"] .backdrop-blur-md {
+  backdrop-filter: blur(12px) !important;
+}
+
+.light .shadow-lg,
+[data-theme="light"] .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(56, 178, 172, 0.1), 0 4px 6px -2px rgba(56, 178, 172, 0.05) !important;
+}
+
+.light .hover\:shadow-lg:hover,
+[data-theme="light"] .hover\:shadow-lg:hover {
+  box-shadow: 0 20px 25px -5px rgba(56, 178, 172, 0.1), 0 10px 10px -5px rgba(56, 178, 172, 0.04) !important;
+}
+
+/* Enhanced form styles */
+.light .focus\:ring-blue-500:focus,
+[data-theme="light"] .focus\:ring-blue-500:focus {
+  box-shadow: 0 0 0 3px rgba(56, 178, 172, 0.1) !important;
+}
+
+.light .focus\:border-transparent:focus,
+[data-theme="light"] .focus\:border-transparent:focus {
+  border-color: #38b2ac !important;
+}
+
+/* Force light theme on hero section specifically */
+.light #home,
+[data-theme="light"] #home {
+  background: #ffffff !important;
+}
+
+.light #home .bg-gradient-to-br,
+[data-theme="light"] #home .bg-gradient-to-br {
+  background: #ffffff !important;
+}
+
+.light #about,
+[data-theme="light"] #about {
+  background-color: #ffffff !important;
+}
+
+.light #projects,
+[data-theme="light"] #projects {
+  background-color: #ffffff !important;
+}
+
+.light #experience,
+[data-theme="light"] #experience {
+  background-color: #ffffff !important;
+}
+
+.light #contact,
+[data-theme="light"] #contact {
+  background-color: #ffffff !important;
+}
+
+/* Dark theme styles - Cool Gray + Teal */
+.dark,
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+.dark section,
+[data-theme="dark"] section {
+  background-color: #121826 !important;
+}
+
+.dark .bg-gray-50,
+[data-theme="dark"] .bg-gray-50 {
+  background-color: #121826 !important;
+}
+
+.dark .bg-white,
+[data-theme="dark"] .bg-white {
+  background-color: #121826 !important;
+}
+
+.dark .text-gray-900,
+[data-theme="dark"] .text-gray-900 {
+  color: #cbd5e0 !important;
+}
+
+.dark .text-gray-600,
+[data-theme="dark"] .text-gray-600 {
+  color: #cbd5e0 !important;
+}
+
+.dark .text-gray-700,
+[data-theme="dark"] .text-gray-700 {
+  color: #cbd5e0 !important;
+}
+
+.dark .text-gray-300,
+[data-theme="dark"] .text-gray-300 {
+  color: #cbd5e0 !important;
+}
+
+.dark body,
+[data-theme="dark"] body {
+  background-color: #121826 !important;
+  color: #cbd5e0 !important;
+}
+
+.dark .min-h-screen,
+[data-theme="dark"] .min-h-screen {
+  background-color: #121826 !important;
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Fallback for Chrome - ensure dark mode works even without JS */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    color-scheme: dark;
+  }
+  
+  :root:not(.light) section {
+    background-color: #111827 !important;
+  }
+  
+  :root:not(.light) .bg-gray-50 {
+    background-color: #111827 !important;
+  }
+  
+  :root:not(.light) .bg-white {
+    background-color: #1f2937 !important;
+  }
+  
+  :root:not(.light) .text-gray-900 {
+    color: #f9fafb !important;
+  }
+  
+  :root:not(.light) .text-gray-600 {
+    color: #d1d5db !important;
+  }
 }
 
 /* Custom scrollbar */

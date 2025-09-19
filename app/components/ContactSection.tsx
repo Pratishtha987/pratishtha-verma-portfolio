@@ -91,51 +91,68 @@ const ContactSection = () => {
             </h3>
             
             <div className="space-y-6 mb-8">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+              <a 
+                href="mailto:pratishthaverma2000@gmail.com"
+                className="flex items-center gap-4 hover:bg-gray-50 dark:hover:bg-gray-700 p-3 rounded-lg transition-colors duration-200 group"
+              >
+                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition-colors">
                   <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900 dark:text-white">Email</p>
-                  <p className="text-gray-600 dark:text-gray-300">pratishthaverma2000@gmail.com</p>
+                  <p className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Email</p>
+                  <p className="text-gray-600 dark:text-gray-300 group-hover:text-blue-500 dark:group-hover:text-blue-300 transition-colors">pratishthaverma2000@gmail.com</p>
                 </div>
-              </div>
+              </a>
               
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center">
-                  <Users className="w-6 h-6 text-green-600 dark:text-green-400" />
+              <a 
+                href="https://linkedin.com/in/pratishthaverma"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 hover:bg-gray-50 dark:hover:bg-gray-700 p-3 rounded-lg transition-colors duration-200 group"
+              >
+                <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center group-hover:bg-green-200 dark:group-hover:bg-green-800 transition-colors">
+                  <Linkedin className="w-6 h-6 text-green-600 dark:text-green-400" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900 dark:text-white">LinkedIn</p>
-                  <p className="text-gray-600 dark:text-gray-300">linkedin.com/in/pratishthaverma</p>
+                  <p className="font-semibold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">LinkedIn</p>
+                  <p className="text-gray-600 dark:text-gray-300 group-hover:text-green-500 dark:group-hover:text-green-300 transition-colors">linkedin.com/in/pratishthaverma</p>
                 </div>
-              </div>
+              </a>
               
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center">
+              <a 
+                href="https://github.com/Pratishtha987"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 hover:bg-gray-50 dark:hover:bg-gray-700 p-3 rounded-lg transition-colors duration-200 group"
+              >
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center group-hover:bg-gray-200 dark:group-hover:bg-gray-600 transition-colors">
                   <Github className="w-6 h-6 text-gray-600 dark:text-gray-400" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900 dark:text-white">GitHub</p>
-                  <p className="text-gray-600 dark:text-gray-300">github.com/pratishthaverma</p>
+                  <p className="font-semibold text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">GitHub</p>
+                  <p className="text-gray-600 dark:text-gray-300 group-hover:text-gray-500 dark:group-hover:text-gray-200 transition-colors">github.com/Pratishtha987</p>
                 </div>
-              </div>
+              </a>
               
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
+              <a 
+                href="tel:+916307613746"
+                className="flex items-center gap-4 hover:bg-gray-50 dark:hover:bg-gray-700 p-3 rounded-lg transition-colors duration-200 group"
+              >
+                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center group-hover:bg-purple-200 dark:group-hover:bg-purple-800 transition-colors">
                   <Users className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900 dark:text-white">Phone</p>
-                  <p className="text-gray-600 dark:text-gray-300">+91 6307613746</p>
+                  <p className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Phone</p>
+                  <p className="text-gray-600 dark:text-gray-300 group-hover:text-purple-500 dark:group-hover:text-purple-300 transition-colors">+91 6307613746</p>
                 </div>
-              </div>
+              </a>
             </div>
 
             <div className="flex gap-4">
               <a
                 href="mailto:pratishthaverma2000@gmail.com"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2"
+                className="text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 flex items-center gap-2 shadow-lg"
+                style={{ backgroundColor: '#38b2ac' }}
               >
                 <Mail className="w-5 h-5" />
                 Send Email
@@ -143,7 +160,12 @@ const ContactSection = () => {
               <a
                 href="/resume.pdf"
                 download
-                className="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300 flex items-center gap-2"
+                className="border-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
+                style={{ 
+                  borderColor: '#38b2ac',
+                  color: '#38b2ac',
+                  backgroundColor: '#ffffff'
+                }}
               >
                 <Download className="w-5 h-5" />
                 Download Resume
@@ -239,8 +261,9 @@ const ContactSection = () => {
                 className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-lg'
+                    : 'hover:shadow-xl shadow-lg'
                 } text-white`}
+                style={!isSubmitting ? { backgroundColor: '#38b2ac' } : {}}
                 whileHover={!isSubmitting ? { scale: 1.02 } : {}}
                 whileTap={!isSubmitting ? { scale: 0.98 } : {}}
               >

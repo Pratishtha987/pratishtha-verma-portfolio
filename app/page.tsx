@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import dynamic from "next/dynamic";
 import { 
@@ -22,30 +22,7 @@ import {
   MapPin,
   ChevronDown
 } from "lucide-react";
-
-// Theme Context
-const useTheme = () => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  const [mounted, setMounted] = useState(false);
-  
-  useEffect(() => {
-    setMounted(true);
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
-  }, []);
-
-  useEffect(() => {
-    if (mounted) {
-      localStorage.setItem('theme', theme);
-      document.documentElement.classList.toggle('dark', theme === 'dark');
-    }
-  }, [theme, mounted]);
-
-  const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');
-  
-  return { theme, toggleTheme, mounted };
-};
+import { useTheme } from "./components/ThemeProvider";
 
 // Navigation Component
 const Navigation = () => {
@@ -150,6 +127,7 @@ const Navigation = () => {
 // Hero Section
 const HeroSection = () => {
   const { scrollY } = useScroll();
+  const { theme, mounted } = useTheme();
   const y = useTransform(scrollY, [0, 500], [0, -150]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
@@ -158,23 +136,29 @@ const HeroSection = () => {
       {/* Background Elements */}
       <motion.div 
         className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
-        style={{ y, opacity }}
+        style={{ 
+          y, 
+          opacity 
+        }}
       />
       
       {/* Floating Shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 left-10 w-20 h-20 bg-blue-200 dark:bg-blue-800 rounded-full opacity-20"
+          className="absolute top-20 left-10 w-20 h-20 rounded-full opacity-10 dark:opacity-20"
+          style={{ backgroundColor: '#38b2ac' }}
           animate={{ y: [0, -20, 0], rotate: [0, 180, 360] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute top-40 right-20 w-16 h-16 bg-purple-200 dark:bg-purple-800 rounded-full opacity-20"
+          className="absolute top-40 right-20 w-16 h-16 rounded-full opacity-10 dark:opacity-20"
+          style={{ backgroundColor: '#38b2ac' }}
           animate={{ y: [0, 20, 0], rotate: [0, -180, -360] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-40 left-1/4 w-12 h-12 bg-pink-200 dark:bg-pink-800 rounded-full opacity-20"
+          className="absolute bottom-40 left-1/4 w-12 h-12 rounded-full opacity-10 dark:opacity-20"
+          style={{ backgroundColor: '#38b2ac' }}
           animate={{ y: [0, -15, 0], x: [0, 10, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -188,9 +172,9 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           Hi, I'm{" "}
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Pratishtha Verma
-          </span>
+                <span className="bg-gradient-to-r from-teal-500 to-teal-700 bg-clip-text text-transparent">
+                  Pratishtha Verma
+                </span>
         </motion.h1>
         
         <motion.p 
@@ -218,26 +202,32 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <motion.a
-            href="#projects"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            View My Work
-            <ExternalLink className="w-5 h-5" />
-          </motion.a>
-          
-          <motion.a
-            href="/resume.pdf"
-            download
-            className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 flex items-center justify-center gap-2"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Download Resume
-            <Download className="w-5 h-5" />
-          </motion.a>
+                <motion.a
+                  href="#projects"
+                  className="text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
+                  style={{ backgroundColor: '#38b2ac' }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  View My Work
+                  <ExternalLink className="w-5 h-5" />
+                </motion.a>
+
+                <motion.a
+                  href="/resume.pdf"
+                  download
+                  className="border-2 px-8 py-4 rounded-full font-semibold transition-all duration-300 flex items-center justify-center gap-2"
+                  style={{ 
+                    borderColor: '#38b2ac',
+                    color: '#38b2ac',
+                    backgroundColor: '#ffffff'
+                  }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Download Resume
+                  <Download className="w-5 h-5" />
+                </motion.a>
         </motion.div>
 
         <motion.div 
