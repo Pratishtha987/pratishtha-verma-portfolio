@@ -303,9 +303,42 @@ body {
   background-color: #121826 !important;
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling and prevent horizontal scroll */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Prevent horizontal overflow on all elements */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure no horizontal scroll on main containers */
+.container, .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl, .max-w-2xl, .max-w-xl, .max-w-lg, .max-w-md, .max-w-sm, .max-w-xs {
+  overflow-x: hidden;
+}
+
+/* Prevent horizontal scroll on sections */
+section {
+  overflow-x: hidden;
+}
+
+/* Ensure images don't cause horizontal overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent text overflow */
+p, h1, h2, h3, h4, h5, h6, span, div {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Fallback for Chrome - ensure dark mode works even without JS */
