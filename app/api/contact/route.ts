@@ -5,12 +5,9 @@ import { Resend } from 'resend';
 console.log('Environment check:', {
   hasApiKey: !!process.env.RESEND_API_KEY,
   hasEmail: !!process.env.YOUR_EMAIL,
-  apiKeyLength: process.env.RESEND_API_KEY?.length || 0
+  apiKeyLength: process.env.RESEND_API_KEY?.length || 0,
+  apiKeyValue: process.env.RESEND_API_KEY
 });
-
-// Get API key from environment variables only
-const apiKey = process.env.RESEND_API_KEY;
-const resend = apiKey ? new Resend(apiKey) : null;
 
 export async function GET() {
   return NextResponse.json({ message: 'Contact API is working' });
@@ -47,8 +44,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Get API key from environment variables (fallback to hardcoded for testing)
+    const apiKey = process.env.RESEND_API_KEY || 're_2ND1Zu7N_ESviSKZrwruab63Dqea6xCb5';
+    
     // Check if API key is available
-    if (!apiKey || !resend) {
+    if (!apiKey) {
       console.error('API key is not available');
       // For now, just log the contact form data and return success
       console.log('Contact form submission (no email sent):', { name, email, message });
@@ -57,6 +57,9 @@ export async function POST(request: NextRequest) {
         { status: 200 }
       );
     }
+
+    // Initialize Resend with API key
+    const resend = new Resend(apiKey);
 
     // Send email using Resend
     try {
