@@ -172,9 +172,9 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           Hi, I'm{" "}
-                <span className="bg-gradient-to-r from-teal-500 to-teal-700 bg-clip-text text-transparent">
-                  Pratishtha Verma
-                </span>
+          <span className="bg-gradient-to-r from-teal-500 to-teal-700 bg-clip-text text-transparent">
+            Pratishtha Verma
+          </span>
         </motion.h1>
         
         <motion.p 

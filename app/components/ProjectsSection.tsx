@@ -10,57 +10,6 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "Amazon Clone",
-      description: "A fully responsive e-commerce platform clone built with React and Next.js, featuring product listings, shopping cart, and user authentication. Optimized for desktop and mobile with modern UI/UX design.",
-      image: "/api/placeholder/600/400",
-      tags: ["HTML", "CSS", "React", "Next.js", "E-commerce", "Responsive Design"],
-      category: "web",
-      liveUrl: "#",
-      githubUrl: "https://github.com/Pratishtha987/Amazon_clone",
-      featured: true,
-      achievements: [
-        "Built complete e-commerce functionality with product catalog and shopping cart",
-        "Implemented responsive design for optimal mobile and desktop experience",
-        "Created modern UI/UX with clean, professional interface",
-        "Demonstrated full-stack development skills with React and Next.js"
-      ]
-    },
-    {
-      id: 2,
-      title: "Seat Booking System",
-      description: "Developed a React Native application for coworking space seat booking with QR code generation and real-time booking management.",
-      image: "/api/placeholder/600/400",
-      tags: ["React Native", "QR Code", "Mobile Development", "Booking System"],
-      category: "mobile",
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true,
-      achievements: [
-        "Enabled users to request bookings and clients to approve them seamlessly",
-        "Implemented QR code generation for confirmed bookings with customer details",
-        "Integrated seat assignment and booking confirmation system",
-        "Built for both iOS and Android platforms"
-      ]
-    },
-    {
-      id: 3,
-      title: "Zoho CRM Custom Framework",
-      description: "Constructed a custom CRM framework using Zoho and no-code technologies, utilized by 15+ team members for enhanced collaboration.",
-      image: "/api/placeholder/600/400",
-      tags: ["Zoho CRM", "No-Code", "Custom Framework", "Team Collaboration"],
-      category: "integration",
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true,
-      achievements: [
-        "Streamlined CRM workflows by integrating AI solutions",
-        "Reduced processing time by 40% through automation",
-        "Improved overall operational efficiency with AI technologies",
-        "Created over five interactive and responsive prototypes"
-      ]
-    },
-    {
-      id: 4,
       title: "Quick-Funded Website",
       description: "A professional business website built with React and Vite, featuring modern design, responsive layout, and deployed on Vercel. Built for a real client with custom domain.",
       image: "/api/placeholder/600/400",
@@ -77,7 +26,7 @@ const ProjectsSection = () => {
       ]
     },
     {
-      id: 5,
+      id: 2,
       title: "Password Generator",
       description: "A secure password generator application built with JavaScript, featuring customizable length, character types, and strength validation for enhanced security. Deployed on Netlify with live demo.",
       image: "/api/placeholder/600/400",
@@ -94,24 +43,7 @@ const ProjectsSection = () => {
       ]
     },
     {
-      id: 6,
-      title: "Spotify Clone",
-      description: "A music streaming application clone built with HTML, CSS, and JavaScript, featuring music player functionality, playlist management, and responsive design.",
-      image: "/api/placeholder/600/400",
-      tags: ["HTML", "CSS", "JavaScript", "Music Player", "Responsive Design"],
-      category: "web",
-      liveUrl: "#",
-      githubUrl: "https://github.com/Pratishtha987/Spotify_Clone",
-      featured: false,
-      achievements: [
-        "Created interactive music player with play/pause, skip, and volume controls",
-        "Implemented responsive design for seamless mobile and desktop experience",
-        "Built playlist management functionality with local storage",
-        "Demonstrated advanced CSS animations and JavaScript DOM manipulation"
-      ]
-    },
-    {
-      id: 7,
+      id: 3,
       title: "Parallax Project",
       description: "An interactive parallax scrolling website built with HTML, CSS, and JavaScript, featuring smooth animations and engaging visual effects for enhanced user experience. Deployed on Netlify with live demo.",
       image: "/api/placeholder/600/400",
@@ -128,7 +60,7 @@ const ProjectsSection = () => {
       ]
     },
     {
-      id: 8,
+      id: 4,
       title: "Quiz Master - Interactive Quiz App",
       description: "A modern, feature-rich quiz application built with React featuring multiple categories, difficulty levels, timer functionality, and comprehensive scoring system. Deployed on Vercel with live demo.",
       image: "/api/placeholder/600/400",
@@ -148,10 +80,7 @@ const ProjectsSection = () => {
 
   const categories = [
     { id: 'all', name: 'All Projects' },
-    { id: 'web', name: 'Web Applications' },
-    { id: 'mobile', name: 'Mobile Apps' },
-    { id: 'integration', name: 'CRM Integration' },
-    { id: 'algorithms', name: 'Algorithms' }
+    { id: 'web', name: 'Web Applications' }
   ];
 
   const filteredProjects = filter === 'all' 

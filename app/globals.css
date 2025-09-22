@@ -324,9 +324,61 @@ body {
   overflow-x: hidden;
 }
 
-/* Prevent horizontal scroll on sections */
+/* Prevent individual section scrolling - only allow main page scroll */
 section {
   overflow-x: hidden;
+  overflow-y: visible;
+  height: auto;
+  min-height: auto;
+}
+
+/* Ensure no individual scrollbars on any containers */
+.container, .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl, .max-w-2xl, .max-w-xl, .max-w-lg, .max-w-md, .max-w-sm, .max-w-xs {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+/* Remove any individual scrolling from main content areas */
+main, .main-content {
+  overflow: visible;
+}
+
+/* Ensure smooth scrolling only on the main page */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Hero section should take full viewport height */
+#home {
+  min-height: 100vh !important;
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+
+/* Other sections should flow normally */
+section:not(#home) {
+  overflow: visible !important;
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+}
+
+/* Ensure main page container doesn't create individual scrollbars */
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+  min-height: 100vh;
+}
+
+/* Remove overflow from all containers that might create individual scrollbars */
+.max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl, .max-w-2xl, .max-w-xl, .max-w-lg, .max-w-md, .max-w-sm, .max-w-xs {
+  overflow: visible !important;
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
 }
 
 /* Ensure images don't cause horizontal overflow */

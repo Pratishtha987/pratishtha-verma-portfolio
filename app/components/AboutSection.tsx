@@ -53,12 +53,21 @@ const AboutSection = () => {
             viewport={{ once: true }}
           >
             <div className="relative">
-              <div className="w-80 h-80 mx-auto bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white text-6xl font-bold">
-                PV
+              <div className="w-80 h-80 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-gray-700 relative">
+                <img 
+                  src="/Picture.jpeg" 
+                  alt="Pratishtha Verma - Frontend Developer"
+                  className="w-full h-full object-cover"
+                />
+                {/* Award badge inside the photo - top position with transform */}
+                <div className="absolute top-4 right-4 w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center shadow-lg transform translate-z-0" style={{ zIndex: 1000, position: 'relative' }}>
+                  <Award className="w-8 h-8 text-white relative z-10" />
+                </div>
               </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center">
-                <Award className="w-12 h-12 text-white" />
-              </div>
+              {/* Decorative elements with more distance */}
+              <div className="absolute -top-4 -left-4 w-8 h-8 bg-teal-400 rounded-full opacity-70 animate-pulse"></div>
+              <div className="absolute top-12 -right-4 w-6 h-6 bg-teal-300 rounded-full opacity-50 animate-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute -bottom-2 -left-6 w-5 h-5 bg-teal-200 rounded-full opacity-60 animate-pulse" style={{ animationDelay: '2s' }}></div>
             </div>
           </motion.div>
 
