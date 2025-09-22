@@ -27,6 +27,40 @@ const ProjectsSection = () => {
     },
     {
       id: 2,
+      title: "Shopping Cart E-commerce",
+      description: "A fully functional e-commerce application built with Next.js featuring product catalog, shopping cart functionality, and responsive design. Includes product listings with detailed descriptions, pricing, and add-to-cart functionality.",
+      image: "/api/placeholder/600/400",
+      tags: ["Next.js", "React", "E-commerce", "Shopping Cart", "Vercel", "JavaScript"],
+      category: "web",
+      liveUrl: "https://shoppingcart-gamma.vercel.app/",
+      githubUrl: "https://github.com/Pratishtha987/shoppingcart",
+      featured: true,
+      achievements: [
+        "Built complete e-commerce functionality with product catalog and shopping cart",
+        "Implemented responsive design for optimal mobile and desktop experience",
+        "Created modern UI/UX with clean, professional interface",
+        "Deployed live application on Vercel with fast loading performance"
+      ]
+    },
+    {
+      id: 3,
+      title: "Quiz Master - Interactive Quiz App",
+      description: "A modern, feature-rich quiz application built with React featuring multiple categories, difficulty levels, timer functionality, and comprehensive scoring system. Deployed on Vercel with live demo.",
+      image: "/api/placeholder/600/400",
+      tags: ["React", "JavaScript", "CSS3", "Quiz App", "Interactive", "Vercel"],
+      category: "web",
+      liveUrl: "https://quiz-app-gamma-sooty.vercel.app/",
+      githubUrl: "https://github.com/Pratishtha987/Quiz-App",
+      featured: true,
+      achievements: [
+        "Built interactive quiz with 6 categories and 3 difficulty levels",
+        "Implemented real-time progress tracking and timer functionality",
+        "Created responsive design with dark/light theme toggle",
+        "Deployed live application on Vercel with modern UI/UX"
+      ]
+    },
+    {
+      id: 4,
       title: "Password Generator",
       description: "A secure password generator application built with JavaScript, featuring customizable length, character types, and strength validation for enhanced security. Deployed on Netlify with live demo.",
       image: "/api/placeholder/600/400",
@@ -43,7 +77,7 @@ const ProjectsSection = () => {
       ]
     },
     {
-      id: 3,
+      id: 5,
       title: "Parallax Project",
       description: "An interactive parallax scrolling website built with HTML, CSS, and JavaScript, featuring smooth animations and engaging visual effects for enhanced user experience. Deployed on Netlify with live demo.",
       image: "/api/placeholder/600/400",
@@ -57,23 +91,6 @@ const ProjectsSection = () => {
         "Created engaging visual animations and interactive elements for adventure theme",
         "Deployed live application on Netlify with custom domain",
         "Demonstrated advanced CSS techniques and JavaScript animations"
-      ]
-    },
-    {
-      id: 4,
-      title: "Quiz Master - Interactive Quiz App",
-      description: "A modern, feature-rich quiz application built with React featuring multiple categories, difficulty levels, timer functionality, and comprehensive scoring system. Deployed on Vercel with live demo.",
-      image: "/api/placeholder/600/400",
-      tags: ["React", "JavaScript", "CSS3", "Quiz App", "Interactive", "Vercel"],
-      category: "web",
-      liveUrl: "https://quiz-app-gamma-sooty.vercel.app/",
-      githubUrl: "https://github.com/Pratishtha987/Quiz-App",
-      featured: true,
-      achievements: [
-        "Built interactive quiz with 6 categories and 3 difficulty levels",
-        "Implemented real-time progress tracking and timer functionality",
-        "Created responsive design with dark/light theme toggle",
-        "Deployed live application on Vercel with modern UI/UX"
       ]
     }
   ];
