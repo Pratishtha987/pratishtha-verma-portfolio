@@ -12,7 +12,7 @@ const ProjectsSection = () => {
       id: 1,
       title: "Quick-Funded Website",
       description: "A professional business website built with React and Vite, featuring modern design, responsive layout, and deployed on Vercel. Built for a real client with custom domain.",
-      image: "/api/placeholder/600/400",
+      image: "/quick-funded-screenshot.png",
       tags: ["React", "Vite", "Vercel", "Business Website", "Client Project"],
       category: "web",
       liveUrl: "https://www.quick-funded.io",
@@ -29,7 +29,7 @@ const ProjectsSection = () => {
       id: 2,
       title: "Shopping Cart E-commerce",
       description: "A fully functional e-commerce application built with Next.js featuring product catalog, shopping cart functionality, and responsive design. Includes product listings with detailed descriptions, pricing, and add-to-cart functionality.",
-      image: "/api/placeholder/600/400",
+      image: "/shopping-cart-screenshot.png",
       tags: ["Next.js", "React", "E-commerce", "Shopping Cart", "Vercel", "JavaScript"],
       category: "web",
       liveUrl: "https://shoppingcart-gamma.vercel.app/",
@@ -46,7 +46,7 @@ const ProjectsSection = () => {
       id: 3,
       title: "Quiz Master - Interactive Quiz App",
       description: "A modern, feature-rich quiz application built with React featuring multiple categories, difficulty levels, timer functionality, and comprehensive scoring system. Deployed on Vercel with live demo.",
-      image: "/api/placeholder/600/400",
+      image: "/quiz-app-screenshot.png",
       tags: ["React", "JavaScript", "CSS3", "Quiz App", "Interactive", "Vercel"],
       category: "web",
       liveUrl: "https://quiz-app-gamma-sooty.vercel.app/",
@@ -63,7 +63,7 @@ const ProjectsSection = () => {
       id: 4,
       title: "Password Generator",
       description: "A secure password generator application built with JavaScript, featuring customizable length, character types, and strength validation for enhanced security. Deployed on Netlify with live demo.",
-      image: "/api/placeholder/600/400",
+      image: "/password-generator-screenshot.png",
       tags: ["JavaScript", "Security", "Password Generation", "Web App", "Netlify"],
       category: "web",
       liveUrl: "https://stirring-basbousa-ebd907.netlify.app/",
@@ -80,7 +80,7 @@ const ProjectsSection = () => {
       id: 5,
       title: "Parallax Project",
       description: "An interactive parallax scrolling website built with HTML, CSS, and JavaScript, featuring smooth animations and engaging visual effects for enhanced user experience. Deployed on Netlify with live demo.",
-      image: "/api/placeholder/600/400",
+      image: "/parallax-screenshot.png",
       tags: ["HTML5", "CSS3", "JavaScript", "Parallax", "Animations", "Netlify"],
       category: "web",
       liveUrl: "https://parallex-pro.netlify.app/",
@@ -167,9 +167,17 @@ const ProjectsSection = () => {
               whileHover={{ y: -5 }}
             >
               <div className="relative">
-                <div className="w-full h-48 flex items-center justify-center text-white text-2xl font-bold"
-                     style={{ backgroundColor: '#38b2ac' }}>
-                  {project.title.charAt(0)}
+                <div className="w-full h-48 overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover object-top"
+                    style={{ 
+                      objectPosition: 'center top',
+                      transform: 'translateY(-20%)',
+                      height: '120%'
+                    }}
+                  />
                 </div>
                 {project.featured && (
                   <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold">
